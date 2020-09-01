@@ -11,10 +11,18 @@ let app = new Vue({
         clickCounter: 0,
         playersMove: false,
         gameInProcess: false,
-        gameOver: false
-    },
-    created: function() {
+        gameOver: false,
+        gameSpeed: 'easy',
+        speedTable: {
+            easy: 1500,
+            normal: 1000,
+            hard: 400
+        },
+        intervalBetweenClicks: ''
 
+    },
+    created: function () {
+        this.setSpeed();
     },
     methods: {
         startGame: function () {
@@ -61,7 +69,8 @@ let app = new Vue({
         checkGamesStep: function (buttonColor) {
             if(buttonColor === this.steps[this.clickCounter]) { //Верный клик
                 this.clickCounter++;
-                if(this.clickCounter === this.steps.length) {
+                this.checkInterval(this.clickCounter);
+                if(this.clickCounter === this.steps.length) { //Проверка на последний клик в раунде
                     this.playersMove = false;
                     this.clickCounter = 0;
                     setTimeout(()=> { // Комфортная задержка между последним кликом игрока и началом хода ИИ
@@ -69,9 +78,21 @@ let app = new Vue({
                     }, 400);
                 }
             } else { //Ошибка игрока
-                this.gameOver = true;
-                this.gameInProcess = false;
+                this.endingGame();
             }
+        },
+        checkInterval: function (stepNumber) {
+            if(this.playersMove) {
+                setTimeout(() => {
+                    if(stepNumber === this.clickCounter) {
+                        this.endingGame();
+                    }
+                }, this.intervalBetweenClicks);
+            }
+        },
+        endingGame: function () {
+            this.gameOver = true;
+            this.gameInProcess = false;
         },
         clearGame: function () {
             this.steps = [];
@@ -79,11 +100,20 @@ let app = new Vue({
             this.playersMove = false;
             this.gameInProcess = false;
             this.gameOver = false;
+        },
+        setSpeed: function () {
+            this.intervalBetweenClicks = this.speedTable[this.gameSpeed];
         }
     },
     computed: {
         round: function () {
             return this.steps.length;
         }
+    },
+    watch: {
+        gameSpeed: function () {
+            this.setSpeed();
+        }
     }
 })
+Vue.config.devtools = true;

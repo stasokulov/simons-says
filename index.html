@@ -12,7 +12,7 @@
 <div id="simon_says">
   <div class="wrapper">
     <h1>
-      Simon says
+      Simon says {{intervalBetweenClicks}}
     </h1>
     <div class="play-area">
       <ul class="play-field">
@@ -27,8 +27,17 @@
           Round: {{round}}
         </h2>
         <button class="start-button" @click="startGame()">Start</button>
-        <p v-if="gameOver">Sorry, you lost after {{steps.length}} rounds :(</p>
+        <h2>Game speed:</h2>
+        <select v-model="gameSpeed">
+          <option value="easy" selected>Easy (interval = 1,5 second)</option>
+          <option value="normal">Normal (interval = 1 second)</option>
+          <option value="hard">Hard (interval = 0,4 second)</option>
+        </select>
       </div>
+    </div>
+    <div class="modal" v-if="gameOver">
+      <p>You lost after {{steps.length}} rounds</p>
+      <button class="start-button" @click="clearGame()">OK</button>
     </div>
   </div>
 </div>
