@@ -1,4 +1,5 @@
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,4 +64,24 @@
     background: #6DABE8;
     border: none;
     padding: 0.3em 0.6em;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    min-width: 260px;
+    max-width: 500px;
+    width: 50%;
+    height: 150px;
+    background-color: darkgray;
+    transform: translate(-50%, -50%);
+}
+
+.modal p {
+    font-size: 25px;
 }
