@@ -19,7 +19,7 @@
     border-radius: 50%;
     box-sizing: border-box;
     list-style: none;
-    opacity: .6;
+    opacity: .5;
 }
 .play-button:hover {
     border: 2px solid black;
@@ -30,22 +30,18 @@
 .red {
     background: #FF5643;
     clip: rect(0px, 300px, 150px, 150px);
-    width: 300px;
 }
 .blue {
     background: dodgerblue;
     clip: rect(0px, 150px, 150px, 0px);
-    width: 300px;
 }
 .yellow {
     background: #FEEF33;
     clip: rect(150px, 150px, 300px, 0px);
-    width: 300px;
 }
 .green {
     background: #BEDE15;
     clip: rect(150px,300px, 300px, 150px);
-    width: 300px;
 }
 
 .play-area {
