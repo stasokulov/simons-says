@@ -41,7 +41,9 @@ let app = new Vue({
         },
         walkUpTheSteps: function (stepNumber) {
             if(stepNumber < this.steps.length) {
-                this.buttons[this.steps[stepNumber]] = this.steps[stepNumber] + ' active_button';//Подсвечиваем кнопку
+                const buttonsName = this.steps[stepNumber];
+                this.playSound(buttonsName);
+                this.buttons[buttonsName] = buttonsName + ' active_button';//Подсвечиваем кнопку
                 setTimeout(() => {
                     this.buttons[this.steps[stepNumber]] = this.steps[stepNumber];//Снимаем подсветку
                     setTimeout(()=> {
@@ -59,6 +61,7 @@ let app = new Vue({
         },
         startPlayersMove: function (buttonColor) {
             if(this.playersMove) {
+                this.playSound(buttonColor);
                 this.buttons[buttonColor] = buttonColor + ' active_button';//Подсвечиваем кнопку
                 this.checkGamesStep(buttonColor);//Отправляем на проверку
                 setTimeout(() => {
@@ -103,6 +106,20 @@ let app = new Vue({
         },
         setSpeed: function () {
             this.intervalBetweenClicks = this.speedTable[this.gameSpeed];
+        },
+        playSound: function (buttonName) {
+            const audio = document.createElement('audio');
+            const audioArea = document.querySelector('#audio');
+            const types = ['mp3', 'ogg'];
+            types.forEach(type => {
+                const source = document.createElement('source');
+                source.src = 'sounds/' + buttonName + '.' + type;
+                source.type = 'audio/' + type;
+                audio.appendChild(source);
+            });
+            audio.autoplay = true;
+            audioArea.innerHTML = '';
+            audioArea.appendChild(audio);
         }
     },
     computed: {
