@@ -68,3 +68,9 @@
     border: none;
     padding: 0.3em 0.6em;
 }
+
+.gitHubRibbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
