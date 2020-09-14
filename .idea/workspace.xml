@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98013f59-9f13-4d5a-9dd2-2349a72458e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/blue.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/blue.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/green.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/green.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/red.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/red.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/yellow.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/yellow.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gtnJk73bjBVYEcKhkdS43f6K3U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98013f59-9f13-4d5a-9dd2-2349a72458e5" name="Default Changelist" comment="" />
+      <created>1598942686800</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598942686800</updated>
+      <workItem from="1598942690586" duration="441000" />
+      <workItem from="1598944236306" duration="1000" />
+      <workItem from="1598980391851" duration="5826000" />
+      <workItem from="1599030242896" duration="3112000" />
+      <workItem from="1599035039519" duration="84000" />
+      <workItem from="1600063285573" duration="1685000" />
+      <workItem from="1600065347240" duration="11000" />
+      <workItem from="1600065600426" duration="117000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
